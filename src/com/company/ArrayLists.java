@@ -27,7 +27,8 @@ public class ArrayLists {
             System.out.println(
                     "1. ArrayList Examples \n" +
                             "2. ArrayList Methods\n" +
-                            "3. Return Home");
+                            "3. Return Home\n" +
+                            "4. Tests");
             switch (input.nextLine()) {
                 case "1" :
                     showArrayListExamples();
@@ -39,6 +40,10 @@ public class ArrayLists {
                     break;
                 case "3" :
                    home.queryResponse();
+                    isValidAnswer = true;
+                    break;
+                case "4":
+                    arrayList();
                     isValidAnswer = true;
                     break;
                 default :
@@ -78,5 +83,15 @@ public class ArrayLists {
         showArrayListInformation();
     }
 
-
+    public void arrayList(){
+        List<String> arrayList = new ArrayList<String>(){{
+            add("a");
+            add("b");
+            add("c");
+        }};
+        System.out.println(arrayList);
+    }
+    /*
+    for the last variable on the list without knowing the size of the array list (arraylist.size - 1)
+     */
 }
